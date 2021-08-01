@@ -8,8 +8,8 @@
 аналогичное приложение.
 
 
-![screen1](https://github.com/barmank32/Otus_RDBMS/blob/homework_03/screen1.png)
+![screen1](https://github.com/barmank32/Otus_RDBMS/blob/master/homework_03/screen1.png)
 
-![screen2](https://github.com/barmank32/Otus_RDBMS/blob/homework_03/screen2.png)
+![screen2](https://github.com/barmank32/Otus_RDBMS/blob/master/homework_03/screen2.png)
 
-![screen3](https://github.com/barmank32/Otus_RDBMS/blob/homework_03/screen3.png)
+![screen3](https://github.com/barmank32/Otus_RDBMS/blob/master/homework_03/screen3.png)
