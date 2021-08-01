@@ -26,3 +26,5 @@ sql
 - https://app.diagrams.net/
 - https://www.mysql.com/products/workbench/
 - https://dbeaver.io/
+
+![screen DB](https://github.com/barmank32/Otus_RDBMS/blob/master/homework_01/screen1.png)
