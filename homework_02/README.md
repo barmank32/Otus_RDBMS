@@ -7,11 +7,11 @@
 ## Index
 - table `Customers` - для авторизации
 ``` sql
-CREATE INDEX email_idx ON "public"."Customers" ( email );
+CREATE INDEX email_idx ON public.Customers ( email );
 ```
 - table `Products` - для поиска товара
 ``` sql
-CREATE INDEX ProductName_idx ON "public"."Products" ( name );
+CREATE INDEX ProductName_idx ON public.Products ( name );
 ```
 
 ## CONSTRAINT
