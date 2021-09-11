@@ -5,7 +5,7 @@
 Научиться использовать функцию LAG и CTE
 
 Создайте таблицу и наполните ее данными
-```
+``` sql
 CREATE TABLE statistic
 ( 
     player_name VARCHAR(100) NOT NULL,
@@ -16,7 +16,7 @@ CREATE TABLE statistic
 );
 ```
 заполнить данными
-```
+``` sql
 INSERT INTO statistic
 (
     player_name,
@@ -42,7 +42,37 @@ INSERT INTO statistic
 ;
 ```
 - написать запрос суммы очков с группировкой и сортировкой по годам
+``` sql
+SELECT year_game,
+       SUM(points)
+FROM statistic
+GROUP BY year_game
+ORDER BY year_game;
+```
 - написать cte показывающее тоже самое
+``` sql
+WITH cte AS
+  (SELECT year_game,
+          points
+   FROM statistic
+   ORDER BY year_game)
+SELECT year_game,
+       SUM (points)
+FROM cte
+GROUP BY year_game;
+```
 - используя функцию LAG вывести кол-во очков по всем игрокам за текущий код и за предыдущий.
-
-
+``` sql
+WITH cte AS
+  (SELECT year_game,
+          SUM(points)
+   FROM statistic
+   WHERE year_game >=2019
+   GROUP BY year_game
+   ORDER BY year_game DESC)
+SELECT year_game,
+       SUM AS sum_year,
+              LAG(SUM, 1) OVER (
+                                ORDER BY SUM) AS sum_before_year
+FROM cte;
+```
