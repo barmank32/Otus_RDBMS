@@ -1,0 +1,42 @@
+version: '3.1'
+
+services:
+
+  master:
+    image: postgres:13.3-alpine
+    restart: always
+    ports:
+        - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: example
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes: 
+      - ../database/:/var/lib/postgresql/data/
+
+  replica:
+    image: postgres:13.3-alpine
+    restart: always
+    ports:
+        - 5433:5432
+    environment:
+      POSTGRES_PASSWORD: example
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes: 
+      - ../replica/:/var/lib/postgresql/data/
+
+  logic:
+    image: postgres:13.3-alpine
+    restart: always
+    ports:
+        - 5434:5432
+    environment:
+      POSTGRES_PASSWORD: example
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes: 
+      - ../logic/:/var/lib/postgresql/data/
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
