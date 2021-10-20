@@ -1,3 +1,5 @@
+### bookmark**Домашнее задание и проектная работа выполнена для курса "[Базы данных](https://otus.ru/lessons/subd/)"**
+![OTUS](https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fotus.ru%2Fstatic%2Fimg%2Ffavicons%2Fandroid-chrome-537x240.jpg%3Fnocache)
 # Репозиторий для ДЗ Курса "Базы данных"
 
 ## Home Work
