@@ -3,11 +3,12 @@ CREATE database IF NOT EXISTS apteka;
 USE apteka;
 
 CREATE TABLE IF NOT EXISTS Products (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	products_id INT UNSIGNED NOT NULL,
 	name varchar(50) NOT NULL,
 	description TEXT,
 	price FLOAT NOT NULL,
-	CONSTRAINT Products_pk PRIMARY KEY (products_id)
+	CONSTRAINT Products_pk PRIMARY KEY (id)
 )
 ENGINE=InnoDB;
 
