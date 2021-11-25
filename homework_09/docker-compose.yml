@@ -5,11 +5,10 @@ services:
     image: mysql:8.0.27
     environment:
       - MYSQL_ROOT_PASSWORD=12345
-    command: 
-    command: 
-      - --default-authentication-plugin=mysql_native_password 
-      - --character-set-server=utf8mb4 
-      - --collation-server=utf8mb4_unicode_ci 
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
       - --innodb_buffer_pool_instances=8
       - --innodb_buffer_pool_size=4G
       - --sql_mode=STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
